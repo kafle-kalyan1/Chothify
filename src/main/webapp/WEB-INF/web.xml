@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         id="WebApp_ID"
+         version="4.0">
+
+  <display-name>Clothify</display-name>
+
+  <!-- Define servlet mappings -->
+
+  <servlet>
+    <servlet-name>LoginHandler</servlet-name>
+    <servlet-class>controller.LoginHandler</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>Register</servlet-name>
+    <servlet-class>controller.RegisterNew</servlet-class>
+  </servlet>
+
+  <!-- Map servlets to URLs -->
+
+
+  <servlet-mapping>
+    <servlet-name>LoginHandler</servlet-name>
+    <url-pattern>/View/Auth/Login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Register</servlet-name>
+    <url-pattern>/Register1</url-pattern>
+  </servlet-mapping>
+
+  <!-- Set welcome files -->
+
+  <welcome-file-list>
+    <welcome-file>View/Login.jsp</welcome-file>
+    <welcome-file>View/User/Home.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+
+
+<servlet>
+  <servlet-name>EditProduct</servlet-name>
+  <servlet-class>controller.EditProduct</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>EditProduct</servlet-name>
+  <url-pattern>/EditProduct</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+  <servlet-name>UpdateProduct</servlet-name>
+  <servlet-class>controller.UpdateProduct</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>UpdateProduct</servlet-name>
+  <url-pattern>/UpdateProduct1</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>ListUser</servlet-name>
+    <servlet-class>controller.ListUser</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ListUser</servlet-name>
+    <url-pattern>/users</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>ProductFilterServlet</servlet-name>
+    <servlet-class>controller.ProductFilterServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ProductFilterServlet</servlet-name>
+    <url-pattern>/filter</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+  <servlet-name>ProductDetail</servlet-name>
+  <servlet-class>controller.ProductDetail</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>ProductDetail</servlet-name>
+  <url-pattern>/ProductDetail</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+  <servlet-name>AddToCartServlet</servlet-name>
+  <servlet-class>controller.AddToCartServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>AddToCartServlet</servlet-name>
+  <url-pattern>/AddToCartServlet</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>RemoveFromCartServlet</servlet-name>
+    <servlet-class>controller.RemoveFromCartServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>RemoveFromCartServlet</servlet-name>
+    <url-pattern>/RemoveCart</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>UpdateProfile</servlet-name>
+    <servlet-class>controller.UpdateProfile</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>UpdateProfile</servlet-name>
+    <url-pattern>/UpdateProfile</url-pattern>
+</servlet-mapping>
+
+<error-page>
+    <error-code>404</error-code>
+    <location>/404.jsp</location>
+</error-page>
+
+</web-app>
